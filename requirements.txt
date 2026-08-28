@@ -1,0 +1,6 @@
+python-fasthtml>=0.14.11
+python-dotenv>=1.0.0
+uvicorn>=0.30.0
+python-multipart>=0.0.9
+fastcore>=1.7.0
+starlette>=0.38.0

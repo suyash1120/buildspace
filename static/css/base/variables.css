@@ -1,0 +1,42 @@
+:root {
+    /* Colors */
+    --paper: #F6F4EE;
+    --paper-card: rgba(255, 255, 255, 0.45);
+    --paper-card-hover: rgba(255, 255, 255, 0.85);
+    --ink: #121212;
+    --ink-light: #242424;
+    --muted: #666660;
+    --muted-light: #999990;
+    --border: #DBD8CF;
+    --border-light: rgba(0, 0, 0, 0.06);
+    --border-dark: rgba(255, 255, 255, 0.12);
+
+    --orange: #E4572E;
+    --orange-glow: rgba(228, 87, 46, 0.15);
+    --green-status: #10B981;
+    --green-glow: rgba(16, 185, 129, 0.25);
+
+    --white: #FFFFFF;
+    --dark: #121316;
+    --dark-surface: #1B1C20;
+    --dark-border: #2B2D33;
+
+    /* Typography */
+    --serif: "Instrument Serif", Georgia, serif;
+    --sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --mono: "JetBrains Mono", "SF Mono", Consolas, Menlo, monospace;
+
+    /* Layout */
+    --page-width: 1320px;
+    --page-padding: 40px;
+
+    /* Shadows & Transitions */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.06);
+    --shadow-terminal: 0 24px 60px rgba(18, 19, 22, 0.18);
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --radius-xl: 24px;
+    --transition: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}

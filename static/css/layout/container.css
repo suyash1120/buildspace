@@ -1,0 +1,8 @@
+.container {
+    width: min(
+        calc(100% - 80px),
+        var(--page-width)
+    );
+
+    margin-inline: auto;
+}

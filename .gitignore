@@ -1,0 +1,29 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+
+# FastHTML & Session Keys
+.sesskey
+
+# Databases & Cache
+*.db
+*.sqlite3
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE & OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Vercel
+.vercel/

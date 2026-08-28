@@ -53,7 +53,13 @@ def post_message(name: str, email: str, message: str):
     )
 
 
+# Vercel entrypoint exports
+application = app
+handler = app
+
+
 if __name__ == "__main__":
     serve()
+
 
 

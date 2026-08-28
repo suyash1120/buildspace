@@ -1,3 +1,5 @@
+import os
+from pathlib import Path
 from fasthtml.common import *
 
 from app.pages.home import HomePage
@@ -5,7 +7,12 @@ from app.pages.case_study import CaseStudyPage
 from app.pages.about import AboutPage
 from app.services.email_service import save_and_dispatch_email
 
+BASE_DIR = Path(__file__).resolve().parent
+
 app, rt = fast_app(
+    secret_key=os.environ.get("SECRET_KEY", "buildspace-secret-key-2026-production"),
+    static_path=str(BASE_DIR),
+    key_fname="/tmp/.sesskey",
     hdrs=(
         Link(
             rel="stylesheet",
@@ -21,6 +28,7 @@ app, rt = fast_app(
         )
     )
 )
+
 
 
 @rt("/")

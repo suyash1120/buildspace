@@ -27,3 +27,8 @@ Thumbs.db
 
 # Vercel
 .vercel/
+
+# Content Calendar & Internal Drafts
+LINKEDIN_POSTS.md
+X_POSTS.md
+CHANGES.md

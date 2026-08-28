@@ -2,7 +2,7 @@
 
 > **Personal Developer Ecosystem & Open Engineering Workshop**  
 > **Built by Suyash Rane** — AI Engineer & Product Builder  
-> **Live Web:** [suyash.dev](https://github.com/suyash1120/buildspace)
+> **Live Web:** [suyash.dev](https://buildspace-kohl.vercel.app/)
 
 ---
 

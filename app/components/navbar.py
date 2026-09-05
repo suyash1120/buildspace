@@ -5,26 +5,24 @@ def Navbar(active_page="home"):
     return Header(
         Div(
             A(
-                Span("BUILDSPACE", cls="nav-brand-title"),
+                Span("Suyash Rane", cls="nav-brand-title"),
                 Span("·", cls="nav-brand-dot"),
-                Span("WORKSHOP", cls="nav-brand-sub"),
+                Span("BuildSpace", cls="nav-brand-sub"),
                 href="/",
                 cls="nav-logo"
             ),
 
             Nav(
-                A("WORK", href="/#work", cls=f"nav-link {'active' if active_page == 'projects' else ''}"),
-                A("EXPERIENCE", href="/#experience", cls="nav-link"),
-                A("ABOUT", href="/#about", cls=f"nav-link {'active' if active_page == 'about' else ''}"),
-                A("CONNECT", href="/#connect", cls="nav-link"),
+                A("Projects", href="/#work", cls=f"nav-link {'active' if active_page == 'projects' else ''}"),
+                A("Experience", href="/#experience", cls="nav-link"),
+                A("About", href="/#about", cls=f"nav-link {'active' if active_page == 'about' else ''}"),
+                A("Contact", href="/#connect", cls="nav-link"),
                 cls="nav-links"
             ),
 
             Div(
                 Span(cls="pulse-dot"),
-                Span("ONLINE", cls="nav-status-label"),
-                Span("/", cls="nav-divider"),
-                Span("2026", cls="nav-year"),
+                Span("Available for opportunities", cls="nav-status-label"),
                 cls="nav-meta"
             ),
 

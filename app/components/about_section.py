@@ -2,11 +2,11 @@ from fasthtml.common import *
 
 
 def SkillTag(text):
-    return Span(text, cls="skill-tag mono")
+    return Span(text, cls="skill-tag")
 
 
 def AchievementItem(text):
-    return Li(Span("★", cls="ach-star"), Span(text, cls="ach-text"), cls="ach-item")
+    return Li(Span("✓", cls="ach-star"), Span(text, cls="ach-text"), cls="ach-item")
 
 
 def AboutSection():
@@ -15,11 +15,11 @@ def AboutSection():
             # Section header
             Div(
                 Div(
-                    Span("04 / ABOUT", cls="section-kicker mono"),
-                    Span("ENGINEER · BUILDER · LEARNER", cls="section-description mono"),
+                    Span("About", cls="section-kicker"),
+                    Span("Background, engineering philosophy & skills", cls="section-description"),
                     cls="section-heading-left",
                 ),
-                Span("SUYASH RANE", cls="section-index mono"),
+                Span("Suyash Rane", cls="section-index"),
                 cls="section-heading",
             ),
 
@@ -37,7 +37,7 @@ def AboutSection():
                             ),
                             Div(
                                 Span(cls="pulse-dot"),
-                                Span("PUNE, INDIA · REMOTE READY", cls="about-photo-tag mono"),
+                                Span("Based in Pune, India", cls="about-photo-tag"),
                                 cls="about-photo-badge"
                             ),
                             cls="about-photo-frame"
@@ -45,15 +45,15 @@ def AboutSection():
 
                         Div(
                             H3("Suyash Rane", cls="about-id-name"),
-                            Span("AI ENGINEER / PRODUCT BUILDER", cls="about-id-role mono"),
+                            Span("AI Engineer & Product Builder", cls="about-id-role"),
                             P(
-                                "B.E. Computer Engineering · NMIET Pune · CGPA 8.25",
-                                cls="about-id-edu mono"
+                                "B.E. Computer Engineering · NMIET Pune (CGPA 8.25)",
+                                cls="about-id-edu"
                             ),
                             Div(
-                                A("ranesuyash2004@gmail.com", href="mailto:ranesuyash2004@gmail.com", cls="about-id-link mono"),
-                                A("github.com/suyash1120", href="https://github.com/suyash1120", target="_blank", cls="about-id-link mono"),
-                                A("LinkedIn ↗", href="https://www.linkedin.com/in/suyash-rane-4aaa84258/", target="_blank", cls="about-id-link mono"),
+                                A("ranesuyash2004@gmail.com", href="mailto:ranesuyash2004@gmail.com", cls="about-id-link"),
+                                A("github.com/suyash1120 ↗", href="https://github.com/suyash1120", target="_blank", cls="about-id-link"),
+                                A("LinkedIn ↗", href="https://www.linkedin.com/in/suyash-rane-4aaa84258/", target="_blank", cls="about-id-link"),
                                 cls="about-id-links"
                             ),
                             cls="about-id-body"
@@ -64,15 +64,15 @@ def AboutSection():
 
                     # Education Card
                     Div(
-                        Span("EDUCATION", cls="about-side-label mono"),
+                        Span("Education", cls="about-side-label"),
                         Div(
                             Div(
-                                Span("B.E. COMPUTER ENGINEERING", cls="edu-degree mono"),
+                                Span("B.E. in Computer Engineering", cls="edu-degree"),
                                 P("PCET's Nutan Maharashtra Institute of Engineering & Technology", cls="edu-school"),
                                 Div(
-                                    Span("2022 – PRESENT", cls="edu-year mono"),
+                                    Span("2022 – Present", cls="edu-year"),
                                     Span("·", cls="edu-sep"),
-                                    Span("CGPA: 8.25", cls="edu-cgpa mono"),
+                                    Span("CGPA: 8.25", cls="edu-cgpa"),
                                     cls="edu-meta"
                                 ),
                                 cls="edu-block"
@@ -84,11 +84,11 @@ def AboutSection():
 
                     # Achievements
                     Div(
-                        Span("ACHIEVEMENTS", cls="about-side-label mono"),
+                        Span("Honors & Leadership", cls="about-side-label"),
                         Ul(
                             AchievementItem("Finalist – COEP Inspiron 4.0 Hackathon 2025"),
                             AchievementItem("Best Innovation Award – SMVITM Hackathon 2024"),
-                            AchievementItem("Vice-President – ACES"),
+                            AchievementItem("Vice-President – ACES (Computer Engineering Students)"),
                             cls="ach-list"
                         ),
                         cls="about-ach-section"
@@ -97,20 +97,24 @@ def AboutSection():
                     cls="about-col-left"
                 ),
 
-                # ─── RIGHT COLUMN: Manifesto + Skills + Certs ────────────────
+                # ─── RIGHT COLUMN: Story + Skills + Certs ────────────────
                 Div(
-                    # Manifesto
+                    # Story / Bio
                     Div(
                         H3(
-                            Span("I DESIGN.", cls="about-manifesto-line"),
-                            Span("I BUILD.", cls="about-manifesto-line"),
-                            Span("I LEARN.", cls="about-manifesto-line"),
+                            "Turning complex technical problems into ",
+                            Span("clean, practical software.", cls="about-headline-highlight"),
                             cls="about-manifesto-heading"
                         ),
                         P(
-                            "A developer building production AI systems, backend infrastructure, and "
-                            "editorial web products. Focused on Python, RAG pipelines, hypermedia "
-                            "architectures, and crafting interfaces that feel deliberate.",
+                            "I'm an engineer passionate about building end-to-end systems that deliver tangible value. "
+                            "My focus spans applied machine learning and RAG architectures, high-performance web backends, "
+                            "and crafting interactive interfaces with modern web standards.",
+                            cls="about-manifesto-tagline"
+                        ),
+                        P(
+                            "Whether architecting decoupled event-driven microservices at my internships or building "
+                            "interactive video-learning engines, I care deeply about clean code, system reliability, and product craft.",
                             cls="about-manifesto-tagline"
                         ),
                         cls="about-manifesto-block"
@@ -118,35 +122,35 @@ def AboutSection():
 
                     # Technical Skills
                     Div(
-                        Span("TECHNICAL SKILLS", cls="about-sub-heading mono"),
+                        Span("Technical Skills", cls="about-sub-heading"),
                         Div(
                             Div(
-                                Span("AI / ML", cls="skill-cat-label mono"),
+                                Span("Applied AI & Machine Learning", cls="skill-cat-label"),
                                 Div(
                                     SkillTag("RAG"), SkillTag("LLMs"), SkillTag("AI Agents"),
-                                    SkillTag("FAISS"), SkillTag("NLP"), SkillTag("Groq LLM"),
+                                    SkillTag("FAISS"), SkillTag("NLP"), SkillTag("Groq"),
                                     SkillTag("Gemini API"), SkillTag("Prompt Engineering"),
-                                    SkillTag("Knowledge Graphs"), SkillTag("Generative AI"),
+                                    SkillTag("Knowledge Graphs"), SkillTag("Qdrant"),
                                     cls="skill-tag-group"
                                 ),
                                 cls="skill-cat-block"
                             ),
                             Div(
-                                Span("LANGUAGES & FRAMEWORKS", cls="skill-cat-label mono"),
+                                Span("Languages & Frameworks", cls="skill-cat-label"),
                                 Div(
                                     SkillTag("Python"), SkillTag("FastAPI"), SkillTag("FastHTML"),
-                                    SkillTag("Next.js"), SkillTag("React"), SkillTag("React Native"),
-                                    SkillTag("Streamlit"), SkillTag("Django"), SkillTag("JavaScript"),
+                                    SkillTag("Next.js"), SkillTag("React"), SkillTag("Streamlit"),
+                                    SkillTag("Django"), SkillTag("JavaScript"), SkillTag("HTMX"),
                                     cls="skill-tag-group"
                                 ),
                                 cls="skill-cat-block"
                             ),
                             Div(
-                                Span("TOOLS & INFRASTRUCTURE", cls="skill-cat-label mono"),
+                                Span("Databases & Infrastructure", cls="skill-cat-label"),
                                 Div(
-                                    SkillTag("REST APIs"), SkillTag("SQL"), SkillTag("GitHub"),
-                                    SkillTag("Netlify"), SkillTag("Postman"), SkillTag("Figma"),
-                                    SkillTag("SQLite"), SkillTag("PostgreSQL"), SkillTag("Docker"),
+                                    SkillTag("PostgreSQL"), SkillTag("SQLite"), SkillTag("Redis"),
+                                    SkillTag("REST APIs"), SkillTag("Docker"), SkillTag("Git/GitHub"),
+                                    SkillTag("CI/CD"), SkillTag("Postman"), SkillTag("Linux"),
                                     cls="skill-tag-group"
                                 ),
                                 cls="skill-cat-block"
@@ -158,20 +162,20 @@ def AboutSection():
 
                     # Certifications
                     Div(
-                        Span("CERTIFICATIONS", cls="about-sub-heading mono"),
+                        Span("Certifications", cls="about-sub-heading"),
                         Div(
                             Div(
-                                Span("PROMPT ENGINEERING", cls="cert-title mono"),
+                                Span("Prompt Engineering", cls="cert-title"),
                                 Span("Udemy", cls="cert-issuer"),
                                 cls="cert-item"
                             ),
                             Div(
-                                Span("PYTHON BASICS", cls="cert-title mono"),
+                                Span("Python Certification", cls="cert-title"),
                                 Span("HackerRank", cls="cert-issuer"),
                                 cls="cert-item"
                             ),
                             Div(
-                                Span("SQL BASICS", cls="cert-title mono"),
+                                Span("SQL Certification", cls="cert-title"),
                                 Span("HackerRank", cls="cert-issuer"),
                                 cls="cert-item"
                             ),

@@ -1,42 +1,51 @@
 :root {
-    /* Colors */
-    --paper: #F6F4EE;
-    --paper-card: rgba(255, 255, 255, 0.45);
-    --paper-card-hover: rgba(255, 255, 255, 0.85);
-    --ink: #121212;
-    --ink-light: #242424;
-    --muted: #666660;
-    --muted-light: #999990;
-    --border: #DBD8CF;
-    --border-light: rgba(0, 0, 0, 0.06);
+    /* Colors - Humanized Warm Contemporary Palette */
+    --paper: #FAF9F6;
+    --paper-card: #FFFFFF;
+    --paper-card-hover: #FFFFFF;
+    --paper-subtle: #F3F2EE;
+    --ink: #16171A;
+    --ink-light: #2C2E33;
+    --muted: #666973;
+    --muted-light: #9699A3;
+    --border: #E5E3DC;
+    --border-light: rgba(0, 0, 0, 0.05);
     --border-dark: rgba(255, 255, 255, 0.12);
 
-    --orange: #E4572E;
-    --orange-glow: rgba(228, 87, 46, 0.15);
-    --green-status: #10B981;
-    --green-glow: rgba(16, 185, 129, 0.25);
+    /* Primary Accent - Warm Terracotta */
+    --orange: #D9532F;
+    --orange-hover: #C24523;
+    --orange-glow: rgba(217, 83, 47, 0.12);
+    --orange-soft: rgba(217, 83, 47, 0.07);
+    --accent-border: rgba(217, 83, 47, 0.25);
 
+    /* Status Indicator */
+    --green-status: #10B981;
+    --green-glow: rgba(16, 185, 129, 0.2);
+
+    /* Dark Surfaces */
     --white: #FFFFFF;
-    --dark: #121316;
-    --dark-surface: #1B1C20;
-    --dark-border: #2B2D33;
+    --dark: #16171B;
+    --dark-surface: #1E2025;
+    --dark-border: #2C2F36;
 
     /* Typography */
-    --serif: "Instrument Serif", Georgia, serif;
-    --sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --serif: "Newsreader", Georgia, serif;
     --mono: "JetBrains Mono", "SF Mono", Consolas, Menlo, monospace;
 
     /* Layout */
-    --page-width: 1320px;
-    --page-padding: 40px;
+    --page-width: 1240px;
+    --page-padding: 36px;
 
-    /* Shadows & Transitions */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-    --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.06);
-    --shadow-terminal: 0 24px 60px rgba(18, 19, 22, 0.18);
-    --radius-sm: 6px;
+    /* Shadows & Radii */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+    --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.02);
+    --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.07), 0 4px 12px rgba(0, 0, 0, 0.03);
+    --shadow-terminal: 0 20px 48px rgba(18, 19, 22, 0.14);
+    --radius-sm: 8px;
     --radius-md: 12px;
-    --radius-lg: 18px;
-    --radius-xl: 24px;
-    --transition: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    --radius-lg: 16px;
+    --radius-xl: 22px;
+    --transition: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }

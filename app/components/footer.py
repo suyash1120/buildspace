@@ -8,9 +8,9 @@ def SiteFooter():
                 # Left Brand Column
                 Div(
                     Div(
-                        Span("BUILDSPACE", cls="footer-brand-title"),
+                        Span("Suyash Rane", cls="footer-brand-title"),
                         Span("·", cls="footer-brand-sep"),
-                        Span("SUYASH RANE", cls="footer-brand-author"),
+                        Span("BuildSpace", cls="footer-brand-author"),
                         cls="footer-brand"
                     ),
                     P(
@@ -19,7 +19,7 @@ def SiteFooter():
                     ),
                     Div(
                         Span(cls="pulse-dot"),
-                        Span("SYSTEM NORMAL · ALL NODES ACTIVE", cls="footer-status-text mono"),
+                        Span("Available for opportunities · Remote & Pune", cls="footer-status-text"),
                         cls="footer-status-badge"
                     ),
                     cls="footer-col-main"
@@ -27,13 +27,13 @@ def SiteFooter():
 
                 # Navigation Column
                 Div(
-                    Span("NAVIGATION", cls="footer-col-title mono"),
+                    Span("Navigation", cls="footer-col-title"),
                     Ul(
-                        Li(A("01 // Workshop", href="/")),
-                        Li(A("02 // Selected Work", href="/#work")),
-                        Li(A("03 // Experience", href="/#experience")),
-                        Li(A("04 // About & Focus", href="/#about")),
-                        Li(A("05 // Connect", href="/#connect")),
+                        Li(A("Home", href="/")),
+                        Li(A("Projects", href="/#work")),
+                        Li(A("Experience", href="/#experience")),
+                        Li(A("About Me", href="/#about")),
+                        Li(A("Contact", href="/#connect")),
                         cls="footer-links-list"
                     ),
                     cls="footer-col"
@@ -41,15 +41,15 @@ def SiteFooter():
 
                 # Projects Column
                 Div(
-                    Span("CASE STUDIES", cls="footer-col-title mono"),
+                    Span("Case Studies", cls="footer-col-title"),
                     Ul(
-                        Li(A("01 / BuildSpace", href="/projects/buildspace")),
-                        Li(A("02 / Clipwise", href="/projects/clipwise")),
-                        Li(A("03 / PulseAI", href="/projects/pulseai")),
-                        Li(A("04 / BillNest", href="/projects/billnest")),
-                        Li(A("05 / HousePrice API", href="/projects/houseprice")),
-                        Li(A("06 / QueueLess", href="/projects/queueless")),
-                        Li(A("07 / TraceKit", href="/projects/tracekit")),
+                        Li(A("BuildSpace", href="/projects/buildspace")),
+                        Li(A("Clipwise", href="/projects/clipwise")),
+                        Li(A("PulseAI", href="/projects/pulseai")),
+                        Li(A("BillNest", href="/projects/billnest")),
+                        Li(A("HousePrice API", href="/projects/houseprice")),
+                        Li(A("QueueLess", href="/projects/queueless")),
+                        Li(A("TraceKit", href="/projects/tracekit")),
                         cls="footer-links-list"
                     ),
                     cls="footer-col"
@@ -58,12 +58,12 @@ def SiteFooter():
 
                 # Connect Column
                 Div(
-                    Span("CONNECT", cls="footer-col-title mono"),
+                    Span("Connect", cls="footer-col-title"),
                     Ul(
                         Li(A("GitHub ↗", href="https://github.com/suyash1120", target="_blank")),
                         Li(A("LinkedIn ↗", href="https://www.linkedin.com/in/suyash-rane-4aaa84258/", target="_blank")),
                         Li(A("X / Twitter ↗", href="https://x.com/SuyashRane10", target="_blank")),
-                        Li(A("Email ↗", href="mailto:ranesuyash2004@gmail.com")),
+                        Li(A("Direct Email ↗", href="mailto:ranesuyash2004@gmail.com")),
                         cls="footer-links-list"
                     ),
                     cls="footer-col"
@@ -74,17 +74,17 @@ def SiteFooter():
 
             Div(
                 Div(
-                    Span("ENGINEERED WITH", cls="footer-sub-label mono"),
-                    Span("PYTHON + FASTHTML", cls="footer-sub-tech mono"),
+                    Span("Crafted with", cls="footer-sub-label"),
+                    Span("Python + FastHTML", cls="footer-sub-tech"),
                     cls="footer-sub-left"
                 ),
-                Span("© 2026 SUYASH RANE — ALL RIGHTS RESERVED", cls="footer-copyright mono"),
+                Span("© 2026 Suyash Rane · All rights reserved.", cls="footer-copyright"),
                 Div(
                     A(
-                        Span("BACK TO TOP"),
+                        Span("Back to top"),
                         Span("↑", cls="footer-arrow"),
                         href="#",
-                        cls="footer-back-top mono"
+                        cls="footer-back-top"
                     ),
                     cls="footer-sub-right"
                 ),

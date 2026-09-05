@@ -2,20 +2,20 @@ from fasthtml.common import *
 
 
 def ChatWidget():
-    """Floating terminal-style direct messenger that dispatches messages to Suyash's inbox."""
+    """Floating modern messenger that dispatches messages to Suyash's inbox."""
     return Div(
         # Floating Trigger Button (collapsed state)
         Button(
             Div(
                 Span(cls="chat-pulse-dot"),
-                Span("SEND MESSAGE", cls="chat-trigger-text mono"),
+                Span("Send a Message", cls="chat-trigger-text"),
                 Span("💬", cls="chat-trigger-icon"),
                 cls="chat-trigger-inner"
             ),
             id="chat-toggle-btn",
             onclick="document.getElementById('chat-modal').classList.toggle('open')",
             cls="chat-trigger-btn",
-            aria_label="Open direct message chat"
+            aria_label="Open message dialog"
         ),
 
         # Floating Chat Box (expanded window)
@@ -24,13 +24,13 @@ def ChatWidget():
             Div(
                 Div(
                     Span(cls="chat-pulse-dot"),
-                    Span("SUYASH.DEV // DIRECT DISPATCH", cls="chat-header-title mono"),
+                    Span("Direct Message · Suyash Rane", cls="chat-header-title"),
                     cls="chat-header-left"
                 ),
                 Button(
                     "✕",
                     onclick="document.getElementById('chat-modal').classList.remove('open')",
-                    cls="chat-close-btn mono",
+                    cls="chat-close-btn",
                     aria_label="Close chat"
                 ),
                 cls="chat-window-header"
@@ -38,8 +38,8 @@ def ChatWidget():
 
             # Status bar
             Div(
-                Span("● CONNECTED", cls="chat-status-indicator mono"),
-                Span("DISPATCHES TO: ranesuyash2004@gmail.com", cls="chat-status-dest mono"),
+                Span("● Active", cls="chat-status-indicator"),
+                Span("Delivers straight to my personal inbox", cls="chat-status-dest"),
                 cls="chat-window-status"
             ),
 
@@ -47,50 +47,50 @@ def ChatWidget():
             Div(
                 Form(
                     P(
-                        "Send a direct message or project inquiry. It will be immediately delivered to my inbox.",
+                        "Have a question, opportunity, or idea to build? Send a note directly to my inbox.",
                         cls="chat-intro-text"
                     ),
                     Div(
-                        Label("YOUR NAME //", for_="chat_name", cls="chat-label mono"),
+                        Label("Your Name", for_="chat_name", cls="chat-label"),
                         Input(
                             type="text",
                             id="chat_name",
                             name="name",
-                            placeholder="Alex Smith",
+                            placeholder="e.g. Alex Smith",
                             required=True,
-                            cls="chat-input mono"
+                            cls="chat-input"
                         ),
                         cls="chat-field"
                     ),
                     Div(
-                        Label("YOUR EMAIL //", for_="chat_email", cls="chat-label mono"),
+                        Label("Your Email", for_="chat_email", cls="chat-label"),
                         Input(
                             type="email",
                             id="chat_email",
                             name="email",
                             placeholder="alex@company.com",
                             required=True,
-                            cls="chat-input mono"
+                            cls="chat-input"
                         ),
                         cls="chat-field"
                     ),
                     Div(
-                        Label("MESSAGE //", for_="chat_msg", cls="chat-label mono"),
+                        Label("Message", for_="chat_msg", cls="chat-label"),
                         Textarea(
                             id="chat_msg",
                             name="message",
                             rows=3,
-                            placeholder="Hey Suyash, let's discuss building...",
+                            placeholder="Hi Suyash, I'd love to chat about...",
                             required=True,
                             cls="chat-textarea"
                         ),
                         cls="chat-field"
                     ),
                     Button(
-                        Span("TRANSMIT TO INBOX"),
+                        Span("Send Message"),
                         Span("→", cls="chat-btn-arrow"),
                         type="submit",
-                        cls="chat-submit-btn mono"
+                        cls="chat-submit-btn"
                     ),
                     hx_post="/api/send-message",
                     hx_target="#chat-form-container",

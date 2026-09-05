@@ -8,41 +8,55 @@ def Hero():
             Div(
                 Div(
                     Span(cls="pulse-dot"),
-                    Span("BUILDING IN PUBLIC", cls="hero-kicker mono"),
+                    Span("Building & Shipping", cls="hero-kicker"),
                     Span("·", cls="hero-kicker-sep"),
-                    Span("OPEN WORKSHOP", cls="hero-kicker-sub mono"),
+                    Span("AI Engineer based in Pune, India", cls="hero-kicker-sub"),
                     cls="hero-kicker-group"
                 ),
-                Span("01 / WORKBENCH", cls="hero-index mono"),
+                Span("Public Portfolio & Systems", cls="hero-index"),
                 cls="hero-heading-row",
             ),
 
             # Main Hero Split: Left Statement + Right Editorial Profile
             Div(
-                # Left Column: The Big Manifesto
+                # Left Column: The Human Statement
                 Div(
                     Div(
-                        Div(
-                            Span("→", cls="hero-arrow"),
-                            Span("I DESIGN.", cls="hero-line-text"),
-                            cls="hero-line",
-                        ),
-                        Div(
-                            Span("→", cls="hero-arrow"),
-                            Span("I BUILD.", cls="hero-line-text"),
-                            cls="hero-line",
-                        ),
-                        Div(
-                            Span("→", cls="hero-arrow"),
-                            Span("I SHIP.", cls="hero-line-text"),
-                            cls="hero-line",
+                        H1(
+                            "Building intelligent systems, practical AI tools, and ",
+                            Span("crafted web products.", cls="hero-headline-highlight"),
+                            cls="hero-headline"
                         ),
                         cls="hero-statement",
                     ),
 
                     P(
-                        "An open workshop documenting software engineering, applied AI architectures, and interactive digital products built with craft.",
+                        "Hi, I'm Suyash Rane — an AI Engineer and full-stack builder with a passion for applied machine learning, "
+                        "robust backend architectures, and clean product design. Welcome to my personal workshop.",
                         cls="hero-sub-text",
+                    ),
+
+                    Div(
+                        A(
+                            Span("View Projects"),
+                            Span("↓", cls="btn-arrow"),
+                            href="#work",
+                            cls="hero-cta-primary",
+                        ),
+                        A(
+                            Span("About Me"),
+                            Span("→", cls="btn-arrow"),
+                            href="#about",
+                            cls="hero-cta-secondary",
+                        ),
+                        A(
+                            Span("GitHub"),
+                            Span("↗", cls="btn-arrow"),
+                            href="https://github.com/suyash1120",
+                            target="_blank",
+                            cls="hero-cta-ghost",
+                        ),
+                        cls="hero-actions"
                     ),
 
                     cls="hero-left",
@@ -60,7 +74,7 @@ def Hero():
                             ),
                             Div(
                                 Span(cls="pulse-dot"),
-                                Span("AVAILABLE FOR BUILDS", cls="profile-badge-text mono"),
+                                Span("Available for opportunities", cls="profile-badge-text"),
                                 cls="profile-avatar-badge"
                             ),
                             cls="profile-avatar-frame"
@@ -70,31 +84,27 @@ def Hero():
                         Div(
                             Div(
                                 H2("Suyash Rane", cls="profile-name"),
-                                Span("AI ENGINEER / BUILDER", cls="profile-role mono"),
+                                Span("AI Engineer & Product Builder", cls="profile-role"),
                                 cls="profile-title-block"
                             ),
 
                             P(
-                                "Designing and building production digital products, applied AI systems, and developer tools for the modern web.",
+                                "Crafting production-ready digital products with Python, FastAPI, FastHTML, and modern AI/RAG models.",
                                 cls="profile-description",
                             ),
 
                             Div(
-                                A(
-                                    Span("ABOUT ME"),
-                                    Span("↗", cls="button-arrow"),
-                                    href="#about",
-                                    cls="profile-btn-primary mono",
+                                Div(
+                                    Span("EDUCATION", cls="profile-mini-label"),
+                                    Span("B.E. Computer Engineering (8.25 CGPA)", cls="profile-mini-val"),
+                                    cls="profile-mini-item"
                                 ),
-                                A(
-                                    Span("GITHUB"),
-                                    Span("↗", cls="button-arrow"),
-                                    href="https://github.com/suyash1120",
-                                    target="_blank",
-                                    cls="profile-btn-ghost mono",
+                                Div(
+                                    Span("FOCUS", cls="profile-mini-label"),
+                                    Span("Applied AI · Full-Stack · System Design", cls="profile-mini-val"),
+                                    cls="profile-mini-item"
                                 ),
-
-                                cls="profile-actions"
+                                cls="profile-mini-grid"
                             ),
 
                             cls="profile-body"
@@ -112,14 +122,14 @@ def Hero():
             Div(
                 Div(
                     Div(
-                        Span("CURRENTLY BUILDING", cls="workbench-tag mono"),
+                        Span("CURRENT FOCUS", cls="workbench-tag"),
                         Span("·", cls="workbench-sep"),
-                        Span("ACTIVE FOCUS", cls="workbench-focus mono"),
+                        Span("Active Project", cls="workbench-focus"),
                         cls="workbench-tag-group"
                     ),
                     Div(
                         Span(cls="pulse-dot"),
-                        Span("SYSTEM ACTIVE", cls="workbench-status mono"),
+                        Span("Active Development", cls="workbench-status"),
                         cls="workbench-status-pill"
                     ),
                     cls="workbench-header"
@@ -127,16 +137,17 @@ def Hero():
 
                 Div(
                     Div(
-                        H3("BUILDSPACE", cls="workbench-title"),
+                        H3("BuildSpace Ecosystem", cls="workbench-title"),
                         P(
-                            "Personal developer ecosystem and live engineering workshop built with Python, FastHTML, and SQLite.",
+                            "An open-source developer hub and live engineering workshop built with Python, FastHTML, and SQLite. "
+                            "Created to document real-world systems, applied AI models, and unfiltered architectural retrospectives.",
                             cls="workbench-desc"
                         ),
                         Div(
-                            Span("PYTHON", cls="workbench-pill mono"),
-                            Span("FASTHTML", cls="workbench-pill mono"),
-                            Span("SQLITE", cls="workbench-pill mono"),
-                            Span("MODERN CSS", cls="workbench-pill mono"),
+                            Span("Python 3.12", cls="workbench-pill"),
+                            Span("FastHTML", cls="workbench-pill"),
+                            Span("SQLite", cls="workbench-pill"),
+                            Span("Modern CSS", cls="workbench-pill"),
                             cls="workbench-stack"
                         ),
                         cls="workbench-left-col"
@@ -144,33 +155,33 @@ def Hero():
 
                     Div(
                         Div(
-                            Span("STATUS", cls="wb-stat-label mono"),
-                            Span("ACTIVE SPRINT", cls="wb-stat-val mono stat-green"),
+                            Span("Role", cls="wb-stat-label"),
+                            Span("Creator & Lead Architect", cls="wb-stat-val"),
                             cls="wb-stat-item"
                         ),
                         Div(
-                            Span("VERSION", cls="wb-stat-label mono"),
-                            Span("0.1.0-alpha", cls="wb-stat-val mono"),
+                            Span("Architecture", cls="wb-stat-label"),
+                            Span("Zero-Bundle Server-Rendered", cls="wb-stat-val"),
                             cls="wb-stat-item"
                         ),
                         Div(
-                            Span("ARCHITECTURE", cls="wb-stat-label mono"),
-                            Span("HYPERMEDIA SSR", cls="wb-stat-val mono"),
+                            Span("Key Focus", cls="wb-stat-label"),
+                            Span("Sub-30ms Global Performance", cls="wb-stat-val stat-green"),
                             cls="wb-stat-item"
                         ),
-                        cls="workbench-right-col"
+                        cls="wb-stat-right-col"
                     ),
 
                     cls="workbench-body"
                 ),
 
                 Div(
-                    Span("LAST COMMITTED: TODAY · ZERO CLIENT JAVASCRIPT BUNDLE", cls="workbench-footer-note mono"),
+                    Span("Designed with craft · Documented with transparency", cls="workbench-footer-note"),
                     A(
-                        Span("EXPLORE BLUEPRINT"),
-                        Span("↗", cls="btn-arrow"),
+                        Span("Read BuildSpace Case Study"),
+                        Span("→", cls="btn-arrow"),
                         href="/projects/buildspace",
-                        cls="workbench-footer-link mono"
+                        cls="workbench-footer-link"
                     ),
                     cls="workbench-footer"
                 ),
@@ -182,4 +193,3 @@ def Hero():
         ),
         cls="hero",
     )
-

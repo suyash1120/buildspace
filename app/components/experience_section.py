@@ -5,18 +5,18 @@ def ExpBadge(text, is_current=False):
     if is_current:
         return Div(
             Span(cls="exp-pulse-dot"),
-            Span(text, cls="exp-badge-text mono"),
+            Span(text, cls="exp-badge-text"),
             cls="exp-badge exp-badge-current"
         )
     return Div(
-        Span(text, cls="exp-badge-text mono"),
+        Span(text, cls="exp-badge-text"),
         cls="exp-badge"
     )
 
 
 def BulletPoint(text):
     return Li(
-        Span("→", cls="exp-bullet-arrow mono"),
+        Span("•", cls="exp-bullet-bullet"),
         Span(text, cls="exp-bullet-text"),
         cls="exp-bullet"
     )
@@ -36,7 +36,7 @@ def ExperienceCard(
         Div(
             # Left timeline node / index indicator
             Div(
-                Span(f"0{num}", cls="exp-index-chip mono"),
+                Span(f"{num}", cls="exp-index-chip"),
                 cls="exp-node-col"
             ),
 
@@ -46,15 +46,15 @@ def ExperienceCard(
                 Div(
                     Div(
                         H3(company, cls="exp-company"),
-                        ExpBadge("CURRENT ROLE" if is_current else period.split("–")[0].strip().upper(), is_current=is_current),
+                        ExpBadge("Current Role" if is_current else period.split("–")[0].strip(), is_current=is_current),
                         cls="exp-title-row"
                     ),
                     Div(
-                        Span(role, cls="exp-role-title mono"),
+                        Span(role, cls="exp-role-title"),
                         Span("·", cls="exp-meta-dot"),
-                        Span(period, cls="exp-period mono"),
+                        Span(period, cls="exp-period"),
                         Span("·", cls="exp-meta-dot"),
-                        Span(location, cls="exp-location mono"),
+                        Span(location, cls="exp-location"),
                         cls="exp-meta-row"
                     ),
                     cls="exp-card-header"
@@ -68,9 +68,9 @@ def ExperienceCard(
 
                 # Tech tags footer
                 Div(
-                    Span("STACK & PRACTICES //", cls="exp-tags-label mono"),
+                    Span("Technologies & Tools:", cls="exp-tags-label"),
                     Div(
-                        *[Span(t, cls="exp-tag mono") for t in (tags or [])],
+                        *[Span(t, cls="exp-tag") for t in (tags or [])],
                         cls="exp-tags-list"
                     ),
                     cls="exp-card-footer"
@@ -91,11 +91,11 @@ def ExperienceSection():
             # Section heading
             Div(
                 Div(
-                    Span("03 / EXPERIENCE", cls="section-kicker mono"),
-                    Span("WORK HISTORY & SYSTEM BUILDS", cls="section-description mono"),
+                    Span("Experience", cls="section-kicker"),
+                    Span("Work history, production systems & internships", cls="section-description"),
                     cls="section-heading-left",
                 ),
-                Span("4 ROLES · 2024–PRESENT", cls="section-index mono"),
+                Span("4 Positions", cls="section-index"),
                 cls="section-heading",
             ),
 

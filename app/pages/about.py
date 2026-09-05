@@ -10,7 +10,7 @@ from app.components.chat_widget import ChatWidget
 
 def AboutPage():
     return (
-        Title("About — Suyash Rane | I DESIGN. I BUILD. I LEARN."),
+        Title("About — Suyash Rane | AI Engineer & Product Builder"),
         Navbar(active_page="about"),
         Main(
             AboutSection(),

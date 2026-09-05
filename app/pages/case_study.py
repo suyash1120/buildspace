@@ -336,8 +336,8 @@ def CaseStudyPage(slug):
                 Div(
                     # Navigation Breadcrumb
                     Div(
-                        A("← BACK TO WORKSHOP", href="/#work", cls="back-link mono"),
-                        Span(f"PROJECT {data['number']} / 0{total_projects}", cls="case-study-badge mono"),
+                        A("← Back to Projects", href="/#work", cls="back-link"),
+                        Span(f"Project {data['number']} of 0{total_projects}", cls="case-study-badge"),
                         cls="case-study-nav"
                     ),
 
@@ -347,22 +347,22 @@ def CaseStudyPage(slug):
                     # Metadata Grid
                     Div(
                         Div(
-                            Span("CATEGORY", cls="case-meta-label mono"),
+                            Span("Category", cls="case-meta-label"),
                             Span(data["category"], cls="case-meta-value"),
                             cls="case-meta-item"
                         ),
                         Div(
-                            Span("YEAR", cls="case-meta-label mono"),
-                            Span(data["year"], cls="case-meta-value mono"),
+                            Span("Year", cls="case-meta-label"),
+                            Span(data["year"], cls="case-meta-value"),
                             cls="case-meta-item"
                         ),
                         Div(
-                            Span("STATUS", cls="case-meta-label mono"),
-                            Span(data["status"], cls="case-meta-value mono"),
+                            Span("Status", cls="case-meta-label"),
+                            Span(data["status"], cls="case-meta-value"),
                             cls="case-meta-item"
                         ),
                         Div(
-                            Span("ROLE", cls="case-meta-label mono"),
+                            Span("Role", cls="case-meta-label"),
                             Span(data["role"], cls="case-meta-value"),
                             cls="case-meta-item"
                         ),
@@ -372,18 +372,18 @@ def CaseStudyPage(slug):
                     # Action Buttons
                     Div(
                         A(
-                            Span("LIVE DEMO"),
+                            Span("Live Demo"),
                             Span("→", cls="btn-arrow"),
                             href=data["demo_url"],
                             target="_blank" if data["demo_url"] != "/" else "_self",
-                            cls="case-btn-primary mono"
+                            cls="case-btn-primary"
                         ) if data["demo_url"] != "#" else None,
                         A(
-                            Span("GITHUB REPOSITORY"),
+                            Span("GitHub Repository"),
                             Span("↗", cls="btn-arrow"),
                             href=data["github_url"],
                             target="_blank",
-                            cls="case-btn-secondary mono"
+                            cls="case-btn-secondary"
                         ),
                         cls="case-study-actions"
                     ),

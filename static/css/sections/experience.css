@@ -114,28 +114,27 @@
 /* ── Card Header ─────────────────────────── */
 
 .exp-card-header {
-    padding-bottom: 12px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
 }
-
 
 .exp-title-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .exp-company {
-    font-family: var(--serif, "Instrument Serif"), serif;
-    font-size: clamp(26px, 3vw, 34px);
-    font-weight: 400;
-    line-height: 1.1;
+    font-family: var(--sans);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25;
     color: var(--ink);
     margin: 0;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.02em;
 }
 
 .exp-meta-row {
@@ -146,12 +145,9 @@
 }
 
 .exp-role-title {
-    font-family: var(--mono);
-    font-size: 11.5px;
-    font-weight: 700;
+    font-size: 13.5px;
+    font-weight: 600;
     color: var(--orange);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
 }
 
 .exp-meta-dot {
@@ -160,18 +156,15 @@
 }
 
 .exp-period {
-    font-family: var(--mono);
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 500;
     color: var(--ink-light);
-    letter-spacing: 0.04em;
 }
 
 .exp-location {
-    font-family: var(--mono);
-    font-size: 11px;
+    font-size: 13px;
     color: var(--muted);
-    letter-spacing: 0.04em;
+    font-weight: 400;
 }
 
 /* ── Badges ──────────────────────────────── */
@@ -180,24 +173,22 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 4px 10px;
-    border-radius: 20px;
-    background: rgba(0, 0, 0, 0.05);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    background: var(--paper-subtle);
     border: 1px solid var(--border);
     flex-shrink: 0;
 }
 
 .exp-badge-text {
-    font-family: var(--mono);
-    font-size: 9.5px;
-    font-weight: 700;
+    font-size: 11.5px;
+    font-weight: 600;
     color: var(--muted);
-    letter-spacing: 0.08em;
 }
 
 .exp-badge-current {
-    background: rgba(228, 87, 46, 0.1);
-    border-color: rgba(228, 87, 46, 0.35);
+    background: var(--orange-soft);
+    border-color: var(--accent-border);
 }
 
 .exp-badge-current .exp-badge-text {
@@ -209,19 +200,18 @@
     height: 6px;
     border-radius: 50%;
     background: var(--orange);
-    box-shadow: 0 0 0 0 rgba(228, 87, 46, 0.6);
     animation: expPulse 2s infinite;
 }
 
 @keyframes expPulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(228, 87, 46, 0.6);
+        box-shadow: 0 0 0 0 rgba(217, 83, 47, 0.5);
     }
     70% {
-        box-shadow: 0 0 0 6px rgba(228, 87, 46, 0);
+        box-shadow: 0 0 0 5px rgba(217, 83, 47, 0);
     }
     100% {
-        box-shadow: 0 0 0 0 rgba(228, 87, 46, 0);
+        box-shadow: 0 0 0 0 rgba(217, 83, 47, 0);
     }
 }
 
@@ -230,34 +220,30 @@
 .exp-bullets {
     list-style: none;
     padding: 0;
-    margin: 0 0 22px;
+    margin: 0 0 20px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
 .exp-bullet {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
+    gap: 10px;
 }
 
-.exp-bullet-arrow {
+.exp-bullet-bullet {
     color: var(--orange);
-    font-family: var(--mono);
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.5;
     flex-shrink: 0;
-    margin-top: 3px;
-    line-height: 1;
 }
 
 .exp-bullet-text {
-    font-family: var(--sans);
-    font-size: 13.5px;
-    font-weight: 450;
-    line-height: 1.68;
-    color: #2D2D2A;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--ink-light);
 }
 
 /* ── Card Footer & Tech Tags ─────────────── */
@@ -267,15 +253,13 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    padding-top: 16px;
-    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
 }
 
 .exp-tags-label {
-    font-family: var(--mono);
-    font-size: 9.5px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
+    font-size: 12px;
+    font-weight: 600;
     color: var(--muted);
     flex-shrink: 0;
 }

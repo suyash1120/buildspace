@@ -4,7 +4,7 @@ from fasthtml.common import *
 def ConnectCard(label, link_text, href, icon_arrow="↗", is_primary=False):
     return A(
         Div(
-            Span(label, cls="connect-card-label mono"),
+            Span(label, cls="connect-card-label"),
             Span(link_text, cls="connect-card-val"),
             cls="connect-card-left"
         ),
@@ -21,11 +21,11 @@ def ConnectSection():
             # Section heading
             Div(
                 Div(
-                    Span("05 / CONNECT", cls="section-kicker mono"),
-                    Span("CHANNELS & DIRECT ACCESS", cls="section-description mono"),
+                    Span("Contact", cls="section-kicker"),
+                    Span("Get in touch for opportunities, projects, or ideas", cls="section-description"),
                     cls="section-heading-left",
                 ),
-                Span("OPEN FOR COLLABORATION", cls="section-index mono"),
+                Span("Open for Collaboration", cls="section-index"),
                 cls="section-heading",
             ),
 
@@ -44,7 +44,7 @@ def ConnectSection():
                     ),
                     Div(
                         Span(cls="pulse-dot"),
-                        Span("AVAILABLE FOR INTERNSHIPS & FREELANCE", cls="connect-status-text mono"),
+                        Span("Available for full-time roles & internships", cls="connect-status-text"),
                         cls="connect-status-badge"
                     ),
                     cls="connect-left-col"
@@ -53,27 +53,27 @@ def ConnectSection():
                 # Right side: The 4 Connect Channels
                 Div(
                     ConnectCard(
-                        "01 // SOURCE CODE",
-                        "github.com/suyash1120 ↗",
+                        "GitHub / Source Code",
+                        "github.com/suyash1120",
                         "https://github.com/suyash1120",
                         icon_arrow="↗",
                         is_primary=True
                     ),
                     ConnectCard(
-                        "02 // PROFESSIONAL NETWORK",
-                        "linkedin.com/in/suyash-rane ↗",
+                        "LinkedIn / Network",
+                        "linkedin.com/in/suyash-rane",
                         "https://www.linkedin.com/in/suyash-rane-4aaa84258/",
                         icon_arrow="↗"
                     ),
                     ConnectCard(
-                        "03 // DIRECT EMAIL",
+                        "Direct Email",
                         "ranesuyash2004@gmail.com",
                         "mailto:ranesuyash2004@gmail.com",
                         icon_arrow="→"
                     ),
                     ConnectCard(
-                        "04 // TWITTER / X",
-                        "@SuyashRane10 ↗",
+                        "Twitter / X",
+                        "@SuyashRane10",
                         "https://x.com/SuyashRane10",
                         icon_arrow="↗"
                     ),

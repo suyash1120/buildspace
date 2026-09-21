@@ -771,8 +771,8 @@
 
 .about-id-edu {
     font-family: var(--mono, "JetBrains Mono"), monospace;
-    font-size: 0.65rem;
-    color: rgba(18, 18, 22, 0.5);
+    font-size: 0.7rem;
+    color: var(--muted-light);
     letter-spacing: 0.08em;
     margin: 4px 0 0;
 }
@@ -788,7 +788,7 @@
 
 .about-id-link {
     font-family: var(--mono, "JetBrains Mono"), monospace;
-    font-size: 0.65rem;
+    font-size: 0.72rem;
     color: var(--orange);
     text-decoration: none;
     letter-spacing: 0.06em;
@@ -830,7 +830,7 @@
 
 .edu-degree {
     font-family: var(--mono, "JetBrains Mono"), monospace;
-    font-size: 0.68rem;
+    font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     color: var(--ink);
@@ -838,8 +838,8 @@
 }
 
 .edu-school {
-    font-size: 0.8rem;
-    color: rgba(18, 18, 22, 0.65);
+    font-size: 0.82rem;
+    color: var(--ink-light);
     line-height: 1.45;
     margin: 0;
 }
@@ -853,9 +853,9 @@
 
 .edu-year, .edu-cgpa {
     font-family: var(--mono, "JetBrains Mono"), monospace;
-    font-size: 0.62rem;
+    font-size: 0.68rem;
     letter-spacing: 0.08em;
-    color: rgba(18, 18, 22, 0.45);
+    color: var(--muted-light);
 }
 
 .edu-cgpa {
@@ -863,7 +863,7 @@
 }
 
 .edu-sep {
-    color: rgba(18, 18, 22, 0.25);
+    color: var(--muted-light);
 }
 
 /* Achievements */
@@ -873,7 +873,7 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 .ach-item {
@@ -884,14 +884,14 @@
 
 .ach-star {
     color: var(--orange);
-    font-size: 0.65rem;
+    font-size: 0.72rem;
     flex-shrink: 0;
     margin-top: 2px;
 }
 
 .ach-text {
-    font-size: 0.78rem;
-    color: rgba(18, 18, 22, 0.7);
+    font-size: 0.8rem;
+    color: var(--ink-light);
     line-height: 1.5;
 }
 
@@ -920,11 +920,12 @@
 
 .skill-cat-label {
     display: block;
-    font-size: 0.6rem;
+    font-size: 0.68rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
-    color: rgba(18, 18, 22, 0.45);
+    letter-spacing: 0.14em;
+    color: var(--orange);
     text-transform: uppercase;
+    margin-bottom: 6px;
 }
 
 .skill-tag-group {
@@ -935,20 +936,20 @@
 
 .skill-tag {
     font-family: var(--mono, "JetBrains Mono"), monospace;
-    font-size: 0.62rem;
-    letter-spacing: 0.08em;
+    font-size: 0.66rem;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     padding: 5px 10px;
-    background: var(--paper-card);
+    background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--border);
     border-radius: 6px;
-    color: rgba(18, 18, 22, 0.65);
+    color: var(--ink-light);
     transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
 
 .skill-tag:hover {
-    background: rgba(228, 87, 46, 0.06);
-    border-color: rgba(228, 87, 46, 0.3);
+    background: rgba(255, 87, 34, 0.1);
+    border-color: rgba(255, 87, 34, 0.35);
     color: var(--orange);
 }
 
@@ -975,7 +976,7 @@
 }
 
 .cert-item:hover {
-    border-color: rgba(228, 87, 46, 0.3);
+    border-color: rgba(255, 87, 34, 0.35);
 }
 
 .cert-title {
@@ -989,12 +990,19 @@
 
 .cert-issuer {
     font-size: 0.72rem;
-    color: rgba(18, 18, 22, 0.5);
+    color: var(--muted);
 }
 
 /* ==========================================
    ABOUT — Responsive
    ========================================== */
+
+@media (max-width: 1100px) {
+    .about-layout-grid {
+        grid-template-columns: minmax(280px, 1fr) minmax(0, 1.55fr);
+        gap: 28px;
+    }
+}
 
 @media (max-width: 992px) {
     .about-layout-grid {
@@ -1014,6 +1022,315 @@
     }
 }
 
+@media (max-width: 768px) {
+    .about-section {
+        padding: 48px 0 52px !important;
+    }
+
+    .about-layout-grid {
+        gap: 24px;
+    }
+
+    .about-id-card,
+    .about-edu-section,
+    .about-ach-section {
+        padding: 18px 18px;
+    }
+
+    .about-photo-frame {
+        height: 240px;
+    }
+
+    .about-id-name {
+        font-size: 1.45rem !important;
+    }
+
+    .about-id-role {
+        font-size: 0.78rem !important;
+    }
+
+    .about-id-edu {
+        font-size: 0.62rem;
+    }
+
+    .about-id-links {
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+
+    .about-id-link {
+        font-size: 0.66rem;
+    }
+
+    .about-sub-heading {
+        font-size: 0.78rem !important;
+    }
+
+    .about-manifesto-heading {
+        font-size: clamp(24px, 6.5vw, 36px) !important;
+    }
+
+    .about-manifesto-tagline {
+        font-size: 14px !important;
+        line-height: 1.7;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .value-card {
+        padding: 14px 14px;
+    }
+
+    .value-icon {
+        font-size: 18px;
+    }
+
+    .value-title {
+        font-size: 0.82rem;
+    }
+
+    .value-desc {
+        font-size: 0.74rem;
+    }
+
+    .skills-col-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+    }
+
+    .skill-cat-label {
+        font-size: 0.64rem;
+    }
+
+    .skill-tag {
+        font-size: 0.62rem;
+        padding: 4px 8px;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px;
+    }
+
+    .cert-item {
+        padding: 12px 12px;
+    }
+
+    .cert-title {
+        font-size: 0.62rem;
+    }
+
+    .cert-issuer {
+        font-size: 0.72rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .about-id-card,
+    .about-edu-section,
+    .about-ach-section {
+        padding: 16px 14px;
+        border-radius: 12px;
+    }
+
+    .about-photo-frame {
+        height: 220px;
+    }
+
+    .about-manifesto-heading {
+        font-size: clamp(22px, 7.5vw, 30px) !important;
+    }
+
+    .value-card {
+        padding: 12px 12px;
+        gap: 10px;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ==========================================
+   ABOUT — Quick Facts Card
+   ========================================== */
+
+.quick-facts-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.quick-fact-row {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 11px 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+}
+
+.quick-fact-row:hover {
+    background: rgba(255, 87, 34, 0.06);
+    border-color: rgba(255, 87, 34, 0.22);
+}
+
+.quick-fact-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.quick-fact-icon {
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.quick-fact-label {
+    font-family: var(--mono, "JetBrains Mono"), monospace;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--orange);
+    text-transform: uppercase;
+}
+
+.quick-fact-val {
+    font-size: 0.8rem;
+    color: var(--ink-light);
+    font-weight: 500;
+    line-height: 1.4;
+    padding-left: 18px;
+}
+
+/* ==========================================
+   ABOUT — Values / Team Fit Cards
+   ========================================== */
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.value-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px 16px;
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md, 14px);
+    transition: transform var(--transition), background var(--transition), border-color var(--transition);
+}
+
+.value-card:hover {
+    transform: translateY(-3px);
+    background: var(--paper-card-hover);
+    border-color: rgba(255, 87, 34, 0.3);
+}
+
+.value-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    line-height: 1.2;
+}
+
+.value-text {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.value-title {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.3;
+}
+
+.value-desc {
+    margin: 0;
+    font-size: 0.76rem;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+/* Manifesto block tweaks */
+.about-manifesto-block {
+    margin-bottom: 32px;
+}
+
+.about-headline-highlight {
+    color: var(--orange);
+    font-style: italic;
+}
+
+.about-manifesto-heading {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 16px;
+    font-family: var(--sans);
+    font-size: clamp(28px, 3.2vw, 44px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+}
+
+.about-manifesto-tagline {
+    font-size: clamp(14px, 1.4vw, 15.5px);
+    line-height: 1.7;
+    color: var(--ink-light);
+    margin: 0 0 16px;
+    max-width: 640px;
+}
+
+.cert-title {
+    font-family: var(--mono, "JetBrains Mono"), monospace;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--ink);
+    text-transform: uppercase;
+}
+
+.cert-issuer {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.cert-item {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.cert-item:hover {
+    border-color: rgba(255, 87, 34, 0.35);
+    background: var(--paper-card-hover);
+}
+
+@media (max-width: 992px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 640px) {
     .cert-grid {
         grid-template-columns: 1fr 1fr;
@@ -1021,5 +1338,9 @@
 
     .about-id-links {
         gap: 6px;
+    }
+
+    .value-card {
+        padding: 16px 14px;
     }
 }

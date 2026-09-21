@@ -1,12 +1,74 @@
 /* ==========================================
-   EXPERIENCE SECTION (04 / EXPERIENCE)
-   High-contrast, editorial timeline layout
+   EXPERIENCE SECTION
+   Editorial dark-theme timeline (no white/black clash)
    ========================================== */
 
 .experience-section {
-    padding: 48px 0 54px;
+    padding: 56px 0 60px;
     border-top: 1px solid var(--border);
     position: relative;
+    background: linear-gradient(to bottom,
+        rgba(255, 87, 34, 0.015) 0%,
+        transparent 300px);
+}
+
+/* ── Intro Wrap & Card ────────────────────── */
+
+.exp-intro-wrap {
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+.exp-intro-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 24px;
+    background: linear-gradient(135deg,
+        rgba(255, 87, 34, 0.08),
+        rgba(255, 87, 34, 0.03) 60%,
+        rgba(0, 240, 255, 0.03));
+    border: 1px solid rgba(255, 87, 34, 0.22);
+    border-radius: var(--radius-lg, 16px);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+}
+
+.exp-intro-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom,
+        var(--orange) 0%,
+        rgba(255, 87, 34, 0.5) 50%,
+        rgba(255, 87, 34, 0.2) 100%);
+    border-radius: 16px 0 0 16px;
+}
+
+.exp-intro-icon {
+    font-size: 26px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    filter: drop-shadow(0 2px 8px rgba(255, 87, 34, 0.35));
+    z-index: 1;
+}
+
+.exp-intro-text {
+    flex: 1;
+    min-width: 0;
+    z-index: 1;
+}
+
+.exp-intro-quote {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink-light);
+    letter-spacing: 0.01em;
 }
 
 /* ── Timeline Container ───────────────────── */
@@ -15,7 +77,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top: 28px;
+    margin-top: 24px;
     position: relative;
 }
 
@@ -30,10 +92,12 @@
     background: linear-gradient(
         to bottom,
         var(--orange) 0%,
-        rgba(228, 87, 46, 0.4) 40%,
+        rgba(255, 87, 34, 0.45) 35%,
+        rgba(255, 87, 34, 0.22) 70%,
         var(--border) 100%
     );
     z-index: 0;
+    border-radius: 2px;
 }
 
 /* ── Card Article ─────────────────────────── */
@@ -63,52 +127,93 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    background: var(--paper);
-    border: 2px solid var(--border);
+    background: var(--paper-card);
+    border: 2px solid rgba(255, 87, 34, 0.38);
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 700;
-    color: var(--ink);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    transition: transform var(--transition), border-color var(--transition), background var(--transition);
+    color: var(--orange);
+    text-shadow: 0 0 10px var(--orange-glow);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.38),
+                inset 0 0 0 1px rgba(255, 87, 34, 0.08);
+    transition: transform var(--transition),
+                border-color var(--transition),
+                background var(--transition),
+                box-shadow 0.25s ease;
     z-index: 2;
 }
 
 .exp-card-current .exp-index-chip {
     border-color: var(--orange);
     color: #ffffff;
-    background: var(--orange);
-    box-shadow: 0 0 0 4px rgba(228, 87, 46, 0.2), 0 4px 12px rgba(228, 87, 46, 0.3);
+    background: radial-gradient(circle at 30% 30%, #FF8A65, var(--orange) 60%);
+    box-shadow:
+        0 0 0 4px rgba(255, 87, 34, 0.22),
+        0 4px 20px rgba(255, 87, 34, 0.42),
+        inset 0 -3px 0 rgba(0, 0, 0, 0.18);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .exp-card:hover .exp-index-chip {
-    border-color: var(--orange);
+    border-color: var(--orange-hover);
+    transform: scale(1.08);
+    box-shadow:
+        0 2px 16px rgba(0, 0, 0, 0.5),
+        inset 0 0 0 1px rgba(255, 87, 34, 0.12);
 }
 
 /* ── Right Card Box ───────────────────────── */
 
 .exp-card-content {
-    background: #FFFFFF;
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, 0.012),
+            rgba(255, 255, 255, 0)) var(--paper-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg, 18px);
     padding: 24px 28px;
     box-shadow: var(--shadow-sm);
-    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition),
+        background 0.25s ease;
     position: relative;
+}
+
+.exp-card-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(135deg,
+        rgba(255, 87, 34, 0) 0%,
+        rgba(255, 87, 34, 0.06) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .exp-card:hover .exp-card-content {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-    border-color: rgba(228, 87, 46, 0.4);
+    box-shadow:
+        0 14px 36px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 87, 34, 0.06);
+    border-color: rgba(255, 87, 34, 0.42);
+}
+
+.exp-card:hover .exp-card-content::before {
+    opacity: 1;
 }
 
 .exp-card-current .exp-card-content {
-    border-color: rgba(228, 87, 46, 0.4);
-    box-shadow: 0 4px 20px rgba(228, 87, 46, 0.08);
+    border-color: rgba(255, 87, 34, 0.38);
+    box-shadow:
+        0 6px 24px rgba(255, 87, 34, 0.1),
+        inset 0 0 0 1px rgba(255, 87, 34, 0.06);
 }
 
 /* ── Card Header ─────────────────────────── */
@@ -124,7 +229,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
 }
 
 .exp-company {
@@ -141,7 +247,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 10px;
 }
 
 .exp-role-title {
@@ -159,12 +265,26 @@
     font-size: 13px;
     font-weight: 500;
     color: var(--ink-light);
+    font-family: var(--mono);
+    letter-spacing: 0.04em;
 }
 
 .exp-location {
     font-size: 13px;
     color: var(--muted);
     font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.exp-location::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--muted);
+    opacity: 0.6;
 }
 
 /* ── Badges ──────────────────────────────── */
@@ -173,7 +293,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 4px 12px;
+    padding: 5px 12px;
     border-radius: 9999px;
     background: var(--paper-subtle);
     border: 1px solid var(--border);
@@ -181,18 +301,24 @@
 }
 
 .exp-badge-text {
-    font-size: 11.5px;
+    font-family: var(--mono);
+    font-size: 10.5px;
     font-weight: 600;
-    color: var(--muted);
+    color: var(--ink-light);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
 .exp-badge-current {
-    background: var(--orange-soft);
-    border-color: var(--accent-border);
+    background: linear-gradient(135deg,
+        rgba(255, 87, 34, 0.16),
+        rgba(255, 87, 34, 0.08));
+    border-color: rgba(255, 87, 34, 0.35);
 }
 
 .exp-badge-current .exp-badge-text {
     color: var(--orange);
+    text-shadow: 0 0 4px rgba(255, 87, 34, 0.2);
 }
 
 .exp-pulse-dot {
@@ -201,18 +327,44 @@
     border-radius: 50%;
     background: var(--orange);
     animation: expPulse 2s infinite;
+    box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2);
 }
 
 @keyframes expPulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(217, 83, 47, 0.5);
+        box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.55);
     }
     70% {
-        box-shadow: 0 0 0 5px rgba(217, 83, 47, 0);
+        box-shadow: 0 0 0 6px rgba(255, 87, 34, 0);
     }
     100% {
-        box-shadow: 0 0 0 0 rgba(217, 83, 47, 0);
+        box-shadow: 0 0 0 0 rgba(255, 87, 34, 0);
     }
+}
+
+/* ── Hand note ────────────────────────────── */
+
+.exp-hand-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255, 229, 127, 0.08);
+    border: 1px dashed rgba(255, 229, 127, 0.28);
+    padding: 6px 14px;
+    border-radius: var(--radius-sm, 8px);
+    margin-bottom: 16px;
+}
+
+.exp-hand-icon {
+    font-size: 13px;
+}
+
+.exp-hand-text {
+    font-family: var(--font-hand);
+    font-size: 20px;
+    color: #FFE082;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
 }
 
 /* ── Bullet Points ───────────────────────── */
@@ -234,15 +386,16 @@
 
 .exp-bullet-bullet {
     color: var(--orange);
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 1.6;
     flex-shrink: 0;
+    opacity: 0.9;
 }
 
 .exp-bullet-text {
     font-size: 14px;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.65;
     color: var(--ink-light);
 }
 
@@ -250,18 +403,22 @@
 
 .exp-card-footer {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
     padding-top: 14px;
     border-top: 1px solid var(--border);
 }
 
 .exp-tags-label {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--muted);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--orange);
     flex-shrink: 0;
+    text-transform: uppercase;
+    padding-top: 5px;
+    font-family: var(--mono);
 }
 
 .exp-tags-list {
@@ -275,26 +432,38 @@
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.05em;
-    padding: 3px 9px;
-    border-radius: 4px;
-    background: var(--paper);
+    padding: 4px 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--border);
-    color: var(--ink);
-    transition: background var(--transition), border-color var(--transition), color var(--transition);
+    color: var(--ink-light);
+    transition: background var(--transition),
+                border-color var(--transition),
+                color var(--transition),
+                transform 0.15s ease;
 }
 
 .exp-tag:hover {
-    background: rgba(228, 87, 46, 0.08);
-    border-color: var(--orange);
+    background: rgba(255, 87, 34, 0.12);
+    border-color: rgba(255, 87, 34, 0.4);
     color: var(--orange);
+    transform: translateY(-1px);
 }
 
-/* ── Responsive ──────────────────────────── */
+/* ==========================================
+   MOBILE RESPONSIVE — Experience
+   ========================================== */
+
+@media (max-width: 900px) {
+    .experience-section {
+        padding: 44px 0 48px;
+    }
+}
 
 @media (max-width: 768px) {
     .exp-card-layout {
         grid-template-columns: 32px minmax(0, 1fr);
-        gap: 16px;
+        gap: 14px;
     }
 
     .exp-timeline::before {
@@ -304,25 +473,65 @@
     .exp-index-chip {
         width: 32px;
         height: 32px;
-        font-size: 10px;
+        font-size: 11px;
+        border-width: 2px;
     }
 
     .exp-card-content {
-        padding: 22px 20px;
+        padding: 20px 18px;
+        border-radius: 14px;
     }
 
     .exp-title-row {
         flex-direction: column;
         align-items: flex-start;
-        gap: 6px;
+        gap: 8px;
     }
 
     .exp-meta-row {
         gap: 6px;
+        font-size: 12px;
+    }
+
+    .exp-company {
+        font-size: 18px;
     }
 
     .exp-card-footer {
         flex-direction: column;
         align-items: flex-start;
+        gap: 10px;
+    }
+
+    .exp-intro-card {
+        padding: 18px 18px 18px 14px;
+        gap: 12px;
+    }
+
+    .exp-intro-icon {
+        font-size: 22px;
+    }
+
+    .exp-intro-quote {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .exp-bullet-text {
+        font-size: 13.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .exp-company {
+        font-size: 17px;
+    }
+
+    .exp-hand-text {
+        font-size: 18px;
+    }
+
+    .exp-card-content {
+        padding: 18px 16px;
     }
 }

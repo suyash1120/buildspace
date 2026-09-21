@@ -7,9 +7,11 @@ def FlagshipProjectCard():
         # Top status bar
         Div(
             Div(
-                Span("Featured Project", cls="flagship-kicker"),
+                Span("01", cls="font-glitch flagship-glitch-num"),
                 Span("·", cls="flagship-sep"),
-                Span("Open Source Workshop", cls="flagship-index"),
+                Span("FLAGSHIP SYSTEM", cls="font-glitch flagship-kicker"),
+                Span("·", cls="flagship-sep"),
+                Span("Live Workshop", cls="flagship-index"),
                 cls="flagship-badge-group"
             ),
             Div(
@@ -24,9 +26,13 @@ def FlagshipProjectCard():
         Div(
             # Left Column: Project Info
             Div(
-                H3(
-                    "BuildSpace",
-                    cls="flagship-title"
+                Div(
+                    H3(
+                        "BuildSpace",
+                        cls="flagship-title"
+                    ),
+                    Div("⚡ runs this whole site with 0 client JS frameworks!", cls="sticky-note flagship-sticky-note"),
+                    cls="flagship-title-wrap"
                 ),
                 P(
                     "A personal developer ecosystem and public engineering workshop. "
@@ -109,12 +115,15 @@ def ProjectCard(
     status="Live",
     year="2026",
     is_active_pulse=False,
+    hand_note=None,
 ):
     return Article(
         Div(
             # Card Top Row: Category, Year & Status
             Div(
                 Div(
+                    Span(number, cls="font-glitch card-number-glitch"),
+                    Span("·", cls="card-dot-sep"),
                     Span(category, cls="card-category"),
                     cls="card-top-left"
                 ),
@@ -139,6 +148,13 @@ def ProjectCard(
                 tagline,
                 cls="card-tagline"
             ),
+
+            # Handwritten note if present
+            Div(
+                Span("✍️", cls="card-hand-icon"),
+                Span(hand_note, cls="font-hand card-hand-text"),
+                cls="card-hand-note"
+            ) if hand_note else None,
 
             # Innovation highlight callout
             Div(
@@ -182,7 +198,6 @@ def ProjectCard(
 def SelectedWork():
     return Section(
         Div(
-            # Section heading
             Div(
                 Div(
                     Span(
@@ -190,94 +205,50 @@ def SelectedWork():
                         cls="section-kicker",
                     ),
                     Span(
-                        "Featured systems, applied AI tools & software experiments",
+                        "A few things I've built recently — systems that solve real problems for real people",
                         cls="section-description",
                     ),
                     cls="section-heading-left",
                 ),
                 Span(
-                    "7 Projects",
+                    "3 Projects",
                     cls="section-index",
                 ),
                 cls="section-heading",
             ),
 
-            # 1. Flagship Spotlight (01 / BUILDSPACE)
             FlagshipProjectCard(),
 
-            # 2. Grid of Bespoke Editorial Projects (02 - 07)
             Div(
-                # 02 / Clipwise
                 ProjectCard(
                     "02",
-                    "clipwise",
-                    "Clipwise",
-                    "Full-Stack Learning Platform with Deep Video Transcript Search",
-                    "Enables learners to search educational video concepts and immediately jump to exact timestamped explanations.",
-                    "Automated YouTube transcript ingestion engine with millisecond-exact seek triggers via HTMX.",
+                    "relay",
+                    "Relay",
+                    "Turns messy team conversations into structured tasks — automatically.",
+                    "Relay watches what your team says in chat, listens for promises and deadlines, and quietly turns 'I'll do that by Friday' into actual tracked work — so nothing falls through the cracks.",
+                    "Groq-powered task extraction from natural language with a React Native mobile app, FastAPI backend, and full project/workspace/team/assignment lifecycle.",
                     [
-                        "FastHTML",
+                        "React Native",
+                        "JavaScript",
+                        "FastAPI",
+                        "Groq LLM",
                         "Python",
-                        "HTMX",
-                        "SQLite",
-                        "YouTube API",
+                        "PostgreSQL",
                     ],
-                    "Video SaaS",
-                    status="In Development",
+                    "AI Team Workflow · Mobile",
+                    status="In Active Development",
                     year="2026",
                     is_active_pulse=True,
+                    hand_note="finally, a task list that writes itself 🎯",
                 ),
 
-                # 03 / PulseAI
                 ProjectCard(
                     "03",
-                    "pulseai",
-                    "PulseAI",
-                    "AI-Powered Knowledge & Document Synthesis Engine",
-                    "High-precision document intelligence platform designed to eliminate hallucinations across large technical knowledge bases.",
-                    "Hybrid Vector Search (BM25 + Dense Embeddings) with Cross-Encoder Reranking in Qdrant.",
-                    [
-                        "Python",
-                        "FastAPI",
-                        "RAG",
-                        "Qdrant",
-                        "LlamaIndex",
-                    ],
-                    "AI & RAG Engine",
-                    status="In Development",
-                    year="2026",
-                    is_active_pulse=True,
-                ),
-
-                # 04 / BillNest
-                ProjectCard(
-                    "04",
-                    "billnest",
-                    "BillNest",
-                    "Invoice & Billing Automation Web System for SMBs",
-                    "Django web application managing customers, inventory, automatic tax/totals calculation, and payment lifecycles.",
-                    "Relational ORM data models with transaction-safe invoice state machines and dynamic form sets.",
-                    [
-                        "Django",
-                        "Python",
-                        "SQLite",
-                        "JavaScript",
-                        "HTML5/CSS3",
-                    ],
-                    "Fintech Web App",
-                    status="In Development",
-                    year="2025",
-                    is_active_pulse=True,
-                ),
-
-                # 05 / HousePrice API
-                ProjectCard(
-                    "05",
                     "houseprice",
                     "HousePrice API",
                     "Machine Learning Property Valuation API & Streamlit Dashboard",
-                    "High-throughput property valuation service with interactive Streamlit UI delivering instant house price predictions based on multidimensional feature vectors.",
-                    "FastAPI REST endpoints and Streamlit frontend with Pydantic request verification and in-memory Scikit-Learn regression inference.",
+                    "High-throughput property valuation service with an interactive Streamlit UI delivering instant house price predictions based on multidimensional feature vectors.",
+                    "FastAPI REST endpoints and Streamlit frontend with Pydantic request verification and in-memory Scikit-Learn regression inference under 10ms.",
                     [
                         "FastAPI",
                         "Streamlit",
@@ -288,46 +259,7 @@ def SelectedWork():
                     "ML Service & API",
                     status="Live API",
                     year="2025",
-                ),
-
-                # 06 / QueueLess
-                ProjectCard(
-                    "06",
-                    "queueless",
-                    "QueueLess",
-                    "Smart Real-Time Appointment & Queue Manager for SMBs",
-                    "Cross-platform queue application providing merchants with instant wait-time estimates and SMS updates.",
-                    "Offline-First SQLite state machine with optimistic updates and client-side runtime.",
-                    [
-                        "Flet",
-                        "Python",
-                        "SQLite",
-                        "FastAPI",
-                        "Twilio API",
-                    ],
-                    "Mobile & Real-Time",
-                    status="Prototype",
-                    year="2025",
-                ),
-
-                # 07 / TraceKit
-                ProjectCard(
-                    "07",
-                    "tracekit",
-                    "TraceKit",
-                    "Developer Intelligence & Application Observability Platform",
-                    "Ultra-low overhead telemetry collector for tracing latency bottlenecks, slow queries, and distributed exceptions.",
-                    "Asynchronous non-blocking UDP telemetry buffer with Redis batching and time-series indexing.",
-                    [
-                        "Django",
-                        "Python",
-                        "PostgreSQL",
-                        "Redis",
-                        "UDP Buffer",
-                    ],
-                    "Observability & DevTools",
-                    status="System Architecture",
-                    year="2025",
+                    hand_note="instant regression inference via FastAPI 📊",
                 ),
 
                 cls="projects-editorial-grid",

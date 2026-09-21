@@ -7,13 +7,17 @@ def Hero():
             # Top status line
             Div(
                 Div(
-                    Span(cls="pulse-dot"),
-                    Span("Building & Shipping", cls="hero-kicker"),
+                    Span("SYS.ACTIVE", cls="font-glitch hero-glitch-badge"),
                     Span("·", cls="hero-kicker-sep"),
-                    Span("AI Engineer based in Pune, India", cls="hero-kicker-sub"),
+                    Span("Suyash Rane", cls="hero-kicker-name"),
+                    Span("·", cls="hero-kicker-sep"),
+                    Span("AI Engineer & Builder", cls="hero-kicker-sub"),
                     cls="hero-kicker-group"
                 ),
-                Span("Public Portfolio & Systems", cls="hero-index"),
+                Div(
+                    Span("real code, no fluff ⚡", cls="font-hand hero-hand-kicker"),
+                    cls="hero-hand-kicker-wrap"
+                ),
                 cls="hero-heading-row",
             ),
 
@@ -22,23 +26,28 @@ def Hero():
                 # Left Column: The Human Statement
                 Div(
                     Div(
+                        Div(
+                            Span("⚡ LIVE WORKSHOP", cls="font-glitch hero-pre-title"),
+                            Div("hand-crafted in Python · zero bloat 🚀", cls="sticky-note hero-sticky-note"),
+                            cls="hero-badge-row"
+                        ),
                         H1(
-                            "Building intelligent systems, practical AI tools, and ",
-                            Span("crafted web products.", cls="hero-headline-highlight"),
+                            "Architecting intelligent systems, practical AI tools, & ",
+                            Span("crafted digital products.", cls="hero-headline-highlight"),
                             cls="hero-headline"
                         ),
                         cls="hero-statement",
                     ),
 
                     P(
-                        "Hi, I'm Suyash Rane — an AI Engineer and full-stack builder with a passion for applied machine learning, "
-                        "robust backend architectures, and clean product design. Welcome to my personal workshop.",
+                        "Hi, I'm Suyash Rane — an AI Engineer and full-stack software builder with a passion for applied machine learning, "
+                        "high-throughput backend architectures, and humanized product craft. Welcome to my personal engineering workshop.",
                         cls="hero-sub-text",
                     ),
 
                     Div(
                         A(
-                            Span("View Projects"),
+                            Span("Explore Projects"),
                             Span("↓", cls="btn-arrow"),
                             href="#work",
                             cls="hero-cta-primary",
@@ -62,7 +71,7 @@ def Hero():
                     cls="hero-left",
                 ),
 
-                # Right Column: Refined Editorial Profile Card
+                # Right Column: Refined Cyber Profile Card
                 Div(
                     Div(
                         # Portrait photo
@@ -74,9 +83,10 @@ def Hero():
                             ),
                             Div(
                                 Span(cls="pulse-dot"),
-                                Span("Available for opportunities", cls="profile-badge-text"),
+                                Span("Available for roles", cls="profile-badge-text"),
                                 cls="profile-avatar-badge"
                             ),
+                            Div("building every single day ✍️", cls="profile-hand-scribble font-hand"),
                             cls="profile-avatar-frame"
                         ),
 
@@ -101,7 +111,7 @@ def Hero():
                                 ),
                                 Div(
                                     Span("FOCUS", cls="profile-mini-label"),
-                                    Span("Applied AI · Full-Stack · System Design", cls="profile-mini-val"),
+                                    Span("Applied AI · Full-Stack · Systems", cls="profile-mini-val"),
                                     cls="profile-mini-item"
                                 ),
                                 cls="profile-mini-grid"

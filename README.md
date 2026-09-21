@@ -2,7 +2,7 @@
 
 > **Personal Developer Ecosystem & Open Engineering Workshop**  
 > **Built by Suyash Rane** — AI Engineer & Product Builder  
-> **Live Web:** [suyash.dev](https://buildspace-kohl.vercel.app/)
+> **Live Web:** [buildspace-kohl.vercel.app](https://buildspace-kohl.vercel.app/)
 
 ---
 
@@ -15,14 +15,13 @@
 ## 🏛️ Architecture & Sections
 
 * **`01 / WORKBENCH`**: Hero manifesto (*I DESIGN. I BUILD. I SHIP.*), portrait card, and live workbench panel.
-* **`02 / SELECTED WORK`**: Curated catalog of 7 systems, tools & experiments with deep-dive case study pages at `/projects/{slug}`:
+* **`02 / SELECTED WORK`**: Curated catalog of 6 systems, tools & experiments with deep-dive case study pages at `/projects/{slug}`:
   * `01 / BUILDSPACE` (Developer Ecosystem — FastHTML + SQLite)
   * `02 / CLIPWISE` (Full-Stack Video Transcript Timestamp Search SaaS)
-  * `03 / PULSEAI` (AI Knowledge & Document Synthesis Engine with Hybrid Vector RAG)
-  * `04 / BILLNEST` (Django Invoice & Billing Automation Web System)
-  * `05 / HOUSEPRICE API` (FastAPI ML Property Valuation Service & Streamlit UI)
-  * `06 / QUEUELESS` (Smart Real-Time Appointment & Queue Manager for SMBs)
-  * `07 / TRACEKIT` (Developer Intelligence & Low-Overhead Observability Platform)
+  * `03 / FLOWLY` (AI‑Powered Productivity & Task Management App)
+  * `04 / AI SMART CHAT` (Multilingual AI chat with voice integration)
+  * `05 / BILLNEST` (Django Invoice & Billing Automation Web System)
+  * `06 / HOUSEPRICE API` (FastAPI ML Property Valuation Service & Streamlit UI)
 * **`03 / EXPERIENCE`**: High-contrast editorial timeline detailing engineering roles at **Patch ID**, **Voltup**, **Mask Polymers**, and **Prepway Solutions**.
 * **`04 / ABOUT`**: Developer manifesto, academic credentials at NMIET Pune (CGPA 8.25), hackathon achievements, categorized skill toolbox, and certifications.
 * **`05 / CONNECT`**: Direct channels to GitHub, LinkedIn, Email, and Twitter/X.
@@ -61,4 +60,4 @@ To enable live email forwarding from the chat widget to your inbox, create a `.e
 ```env
 #1: Free Web3Forms Key (Recommended)
 WEB3FORMS_KEY=your_web3forms_key_here
-
+```

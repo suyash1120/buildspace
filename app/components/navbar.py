@@ -5,9 +5,9 @@ def Navbar(active_page="home"):
     return Header(
         Div(
             A(
-                Span("Suyash Rane", cls="nav-brand-title"),
+                Span("BUILDSPACE", cls="nav-brand-glitch font-glitch"),
                 Span("·", cls="nav-brand-dot"),
-                Span("BuildSpace", cls="nav-brand-sub"),
+                Span("Suyash Rane", cls="nav-brand-sub"),
                 href="/",
                 cls="nav-logo"
             ),

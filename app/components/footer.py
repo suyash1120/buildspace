@@ -44,12 +44,8 @@ def SiteFooter():
                     Span("Case Studies", cls="footer-col-title"),
                     Ul(
                         Li(A("BuildSpace", href="/projects/buildspace")),
-                        Li(A("Clipwise", href="/projects/clipwise")),
-                        Li(A("PulseAI", href="/projects/pulseai")),
-                        Li(A("BillNest", href="/projects/billnest")),
+                        Li(A("Relay", href="/projects/relay")),
                         Li(A("HousePrice API", href="/projects/houseprice")),
-                        Li(A("QueueLess", href="/projects/queueless")),
-                        Li(A("TraceKit", href="/projects/tracekit")),
                         cls="footer-links-list"
                     ),
                     cls="footer-col"

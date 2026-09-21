@@ -12,21 +12,17 @@ def AchievementItem(text):
 def AboutSection():
     return Section(
         Div(
-            # Section header
             Div(
                 Div(
                     Span("About", cls="section-kicker"),
-                    Span("Background, engineering philosophy & skills", cls="section-description"),
+                    Span("The person behind the commits — how I build, what I care about, and a few bad jokes", cls="section-description"),
                     cls="section-heading-left",
                 ),
-                Span("Suyash Rane", cls="section-index"),
+                Span("Hey, I'm Suyash 👋", cls="section-index"),
                 cls="section-heading",
             ),
 
-
-            # Main Layout: Left Portrait + Right Content
             Div(
-                # ─── LEFT COLUMN: Portrait Identity Card ─────────────────────
                 Div(
                     Div(
                         Div(
@@ -37,9 +33,10 @@ def AboutSection():
                             ),
                             Div(
                                 Span(cls="pulse-dot"),
-                                Span("Based in Pune, India", cls="about-photo-tag"),
+                                Span("Pune, India · GMT+5:30", cls="about-photo-tag"),
                                 cls="about-photo-badge"
                             ),
+                            Div("caffeine-powered builder ☕", cls="profile-hand-scribble font-hand"),
                             cls="about-photo-frame"
                         ),
 
@@ -62,33 +59,56 @@ def AboutSection():
                         cls="about-id-card"
                     ),
 
-                    # Education Card
                     Div(
-                        Span("Education", cls="about-side-label"),
+                        Span("Quick Facts", cls="about-side-label"),
                         Div(
                             Div(
-                                Span("B.E. in Computer Engineering", cls="edu-degree"),
-                                P("PCET's Nutan Maharashtra Institute of Engineering & Technology", cls="edu-school"),
                                 Div(
-                                    Span("2022 – Present", cls="edu-year"),
-                                    Span("·", cls="edu-sep"),
-                                    Span("CGPA: 8.25", cls="edu-cgpa"),
-                                    cls="edu-meta"
+                                    Span("🎓", cls="quick-fact-icon"),
+                                    Span("Education", cls="quick-fact-label"),
+                                    cls="quick-fact-header"
                                 ),
-                                cls="edu-block"
+                                Span("B.E. Computer Eng · 2022-Present", cls="quick-fact-val"),
+                                cls="quick-fact-row"
                             ),
-                            cls="about-edu-card"
+                            Div(
+                                Div(
+                                    Span("📍", cls="quick-fact-icon"),
+                                    Span("Location", cls="quick-fact-label"),
+                                    cls="quick-fact-header"
+                                ),
+                                Span("Pune, India", cls="quick-fact-val"),
+                                cls="quick-fact-row"
+                            ),
+                            Div(
+                                Div(
+                                    Span("🎯", cls="quick-fact-icon"),
+                                    Span("Currently Building", cls="quick-fact-label"),
+                                    cls="quick-fact-header"
+                                ),
+                                Span("Relay · Patch ID · This site", cls="quick-fact-val"),
+                                cls="quick-fact-row"
+                            ),
+                            Div(
+                                Div(
+                                    Span("🌙", cls="quick-fact-icon"),
+                                    Span("Peak Productivity", cls="quick-fact-label"),
+                                    cls="quick-fact-header"
+                                ),
+                                Span("11 PM — 3 AM (sorry, mom)", cls="quick-fact-val"),
+                                cls="quick-fact-row"
+                            ),
+                            cls="quick-facts-card"
                         ),
                         cls="about-edu-section"
                     ),
 
-                    # Achievements
                     Div(
-                        Span("Honors & Leadership", cls="about-side-label"),
+                        Span("Honors & Stuff", cls="about-side-label"),
                         Ul(
-                            AchievementItem("Finalist – COEP Inspiron 4.0 Hackathon 2025"),
-                            AchievementItem("Best Innovation Award – SMVITM Hackathon 2024"),
-                            AchievementItem("Vice-President – ACES (Computer Engineering Students)"),
+                            AchievementItem("Finalist — COEP Inspiron 4.0 Hackathon '25 (stayed up 36 hours, worth it)"),
+                            AchievementItem("Best Innovation Award — SMVITM Hackathon '24"),
+                            AchievementItem("Vice-President — ACES (Computer Engg. Students Association)"),
                             cls="ach-list"
                         ),
                         cls="about-ach-section"
@@ -97,32 +117,81 @@ def AboutSection():
                     cls="about-col-left"
                 ),
 
-                # ─── RIGHT COLUMN: Story + Skills + Certs ────────────────
                 Div(
-                    # Story / Bio
                     Div(
+                        Div(
+                            Span("HOW I BUILD THINGS", cls="font-glitch hero-glitch-badge"),
+                            Div("ship it. iterate. don't be a perfectionist ⚡", cls="sticky-note"),
+                            cls="hero-badge-row"
+                        ),
                         H3(
-                            "Turning complex technical problems into ",
-                            Span("clean, practical software.", cls="about-headline-highlight"),
+                            "I build software like I cook — ",
+                            Span("start simple, taste often, and never skip the garlic.", cls="about-headline-highlight"),
                             cls="about-manifesto-heading"
                         ),
                         P(
-                            "I'm an engineer passionate about building end-to-end systems that deliver tangible value. "
-                            "My focus spans applied machine learning and RAG architectures, high-performance web backends, "
-                            "and crafting interactive interfaces with modern web standards.",
+                            "Hi! I'm Suyash. I'm the kind of engineer who gets genuinely excited about three things: "
+                            "turning messy real-world problems into tidy systems, writing code that my six-months-from-now self "
+                            "will still understand, and the moment when a user says 'wait, that just worked?' Like, that's the good stuff.",
                             cls="about-manifesto-tagline"
                         ),
                         P(
-                            "Whether architecting decoupled event-driven microservices at my internships or building "
-                            "interactive video-learning engines, I care deeply about clean code, system reliability, and product craft.",
+                            "I work across the stack — from RAG pipelines that actually answer the question you meant to ask, "
+                            "to FastAPI backends that don't fall over when traffic spikes, to React Native apps that feel good in the hand. "
+                            "But here's the thing: the tech isn't the point. The point is the human on the other side, trying to get something done.",
+                            cls="about-manifesto-tagline"
+                        ),
+                        P(
+                            "Before every line of code I write, I try to ask: would my grandma understand why this exists? "
+                            "If the answer is no, I probably need to spend more time with a whiteboard and less time in VS Code.",
                             cls="about-manifesto-tagline"
                         ),
                         cls="about-manifesto-block"
                     ),
 
-                    # Technical Skills
                     Div(
-                        Span("Technical Skills", cls="about-sub-heading"),
+                        Span("What I Bring to a Team", cls="about-sub-heading"),
+                        Div(
+                            Div(
+                                Div(
+                                    Span("🤝", cls="value-icon"),
+                                    Div(
+                                        H4("Systems Thinking, Not Just Code", cls="value-title"),
+                                        P("I don't just write the function — I ask why the function exists, who it's for, and what breaks when it fails.", cls="value-desc"),
+                                        cls="value-text"
+                                    ),
+                                    cls="value-card"
+                                )
+                            ),
+                            Div(
+                                Div(
+                                    Span("🧪", cls="value-icon"),
+                                    Div(
+                                        H4("Bias Toward Shipping", cls="value-title"),
+                                        P("A v1 that's in users' hands beats a v0.9 that's perfect on my machine. I prototype fast and iterate honestly.", cls="value-desc"),
+                                        cls="value-text"
+                                    ),
+                                    cls="value-card"
+                                )
+                            ),
+                            Div(
+                                Div(
+                                    Span("📝", cls="value-icon"),
+                                    Div(
+                                        H4("Docs Before Deadlines", cls="value-title"),
+                                        P("The PR isn't done until the README says why we did it this way. Future-you will thank present-you.", cls="value-desc"),
+                                        cls="value-text"
+                                    ),
+                                    cls="value-card"
+                                )
+                            ),
+                            cls="values-grid"
+                        ),
+                        cls="about-skills-group"
+                    ),
+
+                    Div(
+                        Span("Technical Tools I Actually Use", cls="about-sub-heading"),
                         Div(
                             Div(
                                 Span("Applied AI & Machine Learning", cls="skill-cat-label"),
@@ -130,7 +199,7 @@ def AboutSection():
                                     SkillTag("RAG"), SkillTag("LLMs"), SkillTag("AI Agents"),
                                     SkillTag("FAISS"), SkillTag("NLP"), SkillTag("Groq"),
                                     SkillTag("Gemini API"), SkillTag("Prompt Engineering"),
-                                    SkillTag("Knowledge Graphs"), SkillTag("Qdrant"),
+                                    SkillTag("Qdrant"),
                                     cls="skill-tag-group"
                                 ),
                                 cls="skill-cat-block"
@@ -138,19 +207,29 @@ def AboutSection():
                             Div(
                                 Span("Languages & Frameworks", cls="skill-cat-label"),
                                 Div(
-                                    SkillTag("Python"), SkillTag("FastAPI"), SkillTag("FastHTML"),
-                                    SkillTag("Next.js"), SkillTag("React"), SkillTag("Streamlit"),
-                                    SkillTag("Django"), SkillTag("JavaScript"), SkillTag("HTMX"),
+                                    SkillTag("Python"), SkillTag("JavaScript"), SkillTag("FastAPI"),
+                                    SkillTag("FastHTML"), SkillTag("React Native"), SkillTag("Next.js"),
+                                    SkillTag("Streamlit"), SkillTag("HTMX"),
                                     cls="skill-tag-group"
                                 ),
                                 cls="skill-cat-block"
                             ),
                             Div(
-                                Span("Databases & Infrastructure", cls="skill-cat-label"),
+                                Span("Mobile & Cross-Platform", cls="skill-cat-label"),
+                                Div(
+                                    SkillTag("React Native"), SkillTag("Firebase"),
+                                    SkillTag("Offline-First SQLite"), SkillTag("REST APIs"),
+                                    SkillTag("State Management"),
+                                    cls="skill-tag-group"
+                                ),
+                                cls="skill-cat-block"
+                            ),
+                            Div(
+                                Span("Databases & Infra", cls="skill-cat-label"),
                                 Div(
                                     SkillTag("PostgreSQL"), SkillTag("SQLite"), SkillTag("Redis"),
-                                    SkillTag("REST APIs"), SkillTag("Docker"), SkillTag("Git/GitHub"),
-                                    SkillTag("CI/CD"), SkillTag("Postman"), SkillTag("Linux"),
+                                    SkillTag("Docker"), SkillTag("Git/GitHub"),
+                                    SkillTag("CI/CD"), SkillTag("Linux"),
                                     cls="skill-tag-group"
                                 ),
                                 cls="skill-cat-block"
@@ -160,9 +239,8 @@ def AboutSection():
                         cls="about-skills-group"
                     ),
 
-                    # Certifications
                     Div(
-                        Span("Certifications", cls="about-sub-heading"),
+                        Span("Certifications (aka I sat through the videos)", cls="about-sub-heading"),
                         Div(
                             Div(
                                 Span("Prompt Engineering", cls="cert-title"),
